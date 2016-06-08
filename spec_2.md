@@ -56,6 +56,13 @@ export default class Plugin {
 }
 ```
 
+nteract will load all of the plugins it finds at page load time.  The loading will
+be done "synchronously", in that it will cause the splash screen to remain visible
+until all extensions are loaded.  The word "synchronously" is used loosely here
+in that the underlying Javascript may be asynchronous, it will just appear
+synchronous to the user.  Extension load failures will not cause the application
+to fail to load.
+
 ## Implementations
 
 N/A
